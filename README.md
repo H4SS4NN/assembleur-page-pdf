@@ -1,46 +1,98 @@
-# Fusionneur de Documents en PDF
+# FusionneurPDF
 
-Une application simple pour fusionner différents types de documents (PDF, images, Word) en un seul fichier PDF.
+Une application moderne pour fusionner des documents PDF, images et documents Word en un seul PDF.
 
 ## Fonctionnalités
 
-- Fusion de plusieurs fichiers PDF
-- Conversion automatique des images (JPG, PNG) en PDF
-- Conversion automatique des documents Word (.docx) en PDF
-- Interface graphique simple et intuitive
-- Possibilité de sélectionner des fichiers individuels ou un dossier entier
-- Gestion des erreurs et des fichiers temporaires
+- Fusion de fichiers PDF
+- Conversion et fusion d'images (JPG, JPEG, PNG)
+- Conversion et fusion de documents Word (DOCX)
+- Interface utilisateur moderne et intuitive
+- Barre de progression en temps réel
+- Estimation du temps restant
+- Support multilingue (Français)
+
+## Prérequis
+
+- Python 3.8 ou supérieur
+- pip (gestionnaire de paquets Python)
+- Inno Setup (pour la création d'installateur Windows)
 
 ## Installation
 
-1. Assurez-vous d'avoir Python 3.7 ou supérieur installé sur votre système
-2. Installez les dépendances requises :
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Développement
 
-## Utilisation
+1. Clonez le dépôt :
+```bash
+git clone [URL_DU_REPO]
+cd FusionneurPDF
+```
 
-1. Lancez l'application :
-   ```bash
-   python pdf_merger.py
-   ```
+2. Installez les dépendances :
+```bash
+pip install -r requirements.txt
+```
 
-2. Dans l'interface graphique :
-   - Cliquez sur "Sélectionner des fichiers" pour choisir des fichiers individuels
-   - Ou cliquez sur "Sélectionner un dossier" pour sélectionner tous les fichiers d'un dossier
-   - Cliquez sur "Fusionner les documents" pour créer le PDF final
+3. Lancez l'application :
+```bash
+python src/pdf_merger.py
+```
 
-3. Le fichier final sera sauvegardé sous le nom `fusion_finale.pdf` dans le même dossier que le premier fichier sélectionné.
+### Utilisation
 
-## Formats supportés
+1. Téléchargez la dernière version depuis les releases
+2. Exécutez l'installateur
+3. Suivez les instructions d'installation
+4. Lancez l'application depuis le menu Démarrer ou le bureau
 
-- PDF (.pdf)
-- Images (.jpg, .jpeg, .png)
-- Documents Word (.docx)
+## Structure du Projet
 
-## Notes
+```
+FusionneurPDF/
+├── src/                    # Code source
+│   ├── pdf_merger.py      # Application principale
+│   └── install.py         # Script d'installation
+├── docs/                   # Documentation
+│   ├── user_guide.md      # Guide utilisateur
+│   └── dev_guide.md       # Guide développeur
+├── tests/                  # Tests unitaires
+├── dist/                   # Fichiers de distribution
+├── requirements.txt        # Dépendances
+└── README.md              # Ce fichier
+```
 
-- L'application crée des fichiers temporaires pendant la conversion, qui sont automatiquement supprimés après la fusion
-- En cas d'erreur, un message d'erreur explicite sera affiché
-- Le fichier final est toujours nommé `fusion_finale.pdf` 
+## Développement
+
+### Architecture
+
+L'application est construite avec :
+- Python 3.8+
+- Tkinter pour l'interface graphique
+- PyPDF2 pour la manipulation des PDF
+- pdf2image pour la conversion d'images
+- docx2pdf pour la conversion de Word
+
+### Contribution
+
+1. Fork le projet
+2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
+
+### Tests
+
+Pour exécuter les tests :
+```bash
+python -m pytest tests/
+```
+
+## Licence
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+
+## Contact
+
+Votre Nom - [@votre_twitter](https://twitter.com/votre_twitter)
+
+Lien du Projet: [https://github.com/votre_username/FusionneurPDF](https://github.com/votre_username/FusionneurPDF) 
