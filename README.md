@@ -16,34 +16,51 @@ Une application moderne pour fusionner des documents PDF, images et documents Wo
 
 - Python 3.8 ou supérieur
 - pip (gestionnaire de paquets Python)
-- Inno Setup (pour la création d'installateur Windows)
+- Poppler (pour la conversion PDF vers image)
+  - Windows : Téléchargez depuis [poppler-windows](https://github.com/oschwartz10612/poppler-windows/releases/) et ajoutez le dossier bin au PATH
+  - Linux : `sudo apt-get install poppler-utils`
+  - macOS : `brew install poppler`
 
 ## Installation
 
-### Développement
+### Option 1 : Installation via l'exécutable (Recommandé)
+
+1. Téléchargez la dernière version depuis la section [Releases](https://github.com/votre_username/FusionneurPDF/releases)
+2. Exécutez le fichier `FusionneurPDF-Setup.exe`
+3. Suivez les instructions de l'installateur
+4. L'application sera disponible dans le menu Démarrer et sur le bureau
+
+### Option 2 : Installation depuis les sources
 
 1. Clonez le dépôt :
+
 ```bash
-git clone [URL_DU_REPO]
+git clone https://github.com/votre_username/FusionneurPDF.git
 cd FusionneurPDF
 ```
 
 2. Installez les dépendances :
+
 ```bash
 pip install -r requirements.txt
 ```
 
 3. Lancez l'application :
+
 ```bash
 python src/pdf_merger.py
 ```
 
-### Utilisation
+## Utilisation
 
-1. Téléchargez la dernière version depuis les releases
-2. Exécutez l'installateur
-3. Suivez les instructions d'installation
-4. Lancez l'application depuis le menu Démarrer ou le bureau
+1. Lancez l'application
+2. Cliquez sur "Ajouter des fichiers" pour sélectionner les documents à fusionner
+3. Utilisez les boutons de la barre d'outils pour :
+   - Réorganiser les fichiers (glisser-déposer)
+   - Supprimer des fichiers
+   - Vider la liste
+4. Cliquez sur "Fusionner" pour créer le PDF final
+5. Choisissez l'emplacement de sauvegarde du fichier final
 
 ## Structure du Projet
 
@@ -66,6 +83,7 @@ FusionneurPDF/
 ### Architecture
 
 L'application est construite avec :
+
 - Python 3.8+
 - Tkinter pour l'interface graphique
 - PyPDF2 pour la manipulation des PDF
@@ -83,6 +101,7 @@ L'application est construite avec :
 ### Tests
 
 Pour exécuter les tests :
+
 ```bash
 python -m pytest tests/
 ```
@@ -95,4 +114,4 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 Votre Nom - [@votre_twitter](https://twitter.com/votre_twitter)
 
-Lien du Projet: [https://github.com/votre_username/FusionneurPDF](https://github.com/votre_username/FusionneurPDF) 
+Lien du Projet: [https://github.com/votre_username/FusionneurPDF](https://github.com/votre_username/FusionneurPDF)
